@@ -3,6 +3,7 @@ import SectionHeader from "../components/ui/SectionHeader";
 import { useTaskStore } from "../store/useTaskStore";
 import { useProgressStore } from "../store/useProgressStore";
 import AnimatedPage from "../components/ui/AnimatedPage";
+import DashboardScene from "../scenes/DashboardScene";
 
 export default function DashboardPage() {
   const tasks = useTaskStore((state) => state.tasks);
@@ -80,8 +81,8 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="mt-6 h-44 rounded-2xl border border-dashed border-white/10 bg-slate-950/40 flex items-center justify-center text-sm text-slate-500">
-            Future: Smart Dashboard + 3D Visual Layer
+          <div className="mt-6 h-64 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/40">
+            <DashboardScene />
           </div>
         </div>
 
