@@ -149,3 +149,6 @@ Built by Aniketh
 ## ⭐ If you like this project
 
 Give it a star ⭐ — it helps a lot!
+
+© 2026 Aniketh. All rights reserved.
+This project is for portfolio and educational purposes.
