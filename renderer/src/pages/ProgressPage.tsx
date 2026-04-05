@@ -1,17 +1,36 @@
+import { useMemo } from "react";
 import SectionHeader from "../components/ui/SectionHeader";
+import AnimatedPage from "../components/ui/AnimatedPage";
 import { useProgressStore } from "../store/useProgressStore";
+
+function getTodayDateString() {
+  return new Date().toISOString().split("T")[0];
+}
 
 export default function ProgressPage() {
   const daily = useProgressStore((state) => state.daily);
   const streakCount = useProgressStore((state) => state.streakCount);
-  const todayProgress = useProgressStore((state) => state.getTodayProgress());
 
-  const recentDays = [...daily]
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
-    .slice(0, 7);
+  const todayProgress = useMemo(() => {
+    const today = getTodayDateString();
+    return (
+      daily.find((entry) => entry.date === today) ?? {
+        date: today,
+        focusMinutes: 0,
+        focusSessionsCompleted: 0,
+        tasksCompleted: 0,
+      }
+    );
+  }, [daily]);
+
+  const recentDays = useMemo(() => {
+    return [...daily]
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
+      .slice(0, 7);
+  }, [daily]);
 
   return (
-    <div className="space-y-6">
+    <AnimatedPage>
       <SectionHeader
         label="Progress"
         title="Analytics & Growth"
@@ -77,6 +96,6 @@ export default function ProgressPage() {
           )}
         </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 }

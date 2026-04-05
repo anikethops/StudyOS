@@ -1,14 +1,31 @@
+import { useMemo } from "react";
 import StatCard from "../components/ui/StatCard";
 import SectionHeader from "../components/ui/SectionHeader";
-import { useTaskStore } from "../store/useTaskStore";
-import { useProgressStore } from "../store/useProgressStore";
 import AnimatedPage from "../components/ui/AnimatedPage";
 import DashboardScene from "../scenes/DashboardScene";
+import { useTaskStore } from "../store/useTaskStore";
+import { useProgressStore } from "../store/useProgressStore";
+
+function getTodayDateString() {
+  return new Date().toISOString().split("T")[0];
+}
 
 export default function DashboardPage() {
   const tasks = useTaskStore((state) => state.tasks);
-  const todayProgress = useProgressStore((state) => state.getTodayProgress());
+  const daily = useProgressStore((state) => state.daily);
   const streakCount = useProgressStore((state) => state.streakCount);
+
+  const todayProgress = useMemo(() => {
+    const today = getTodayDateString();
+    return (
+      daily.find((entry) => entry.date === today) ?? {
+        date: today,
+        focusMinutes: 0,
+        focusSessionsCompleted: 0,
+        tasksCompleted: 0,
+      }
+    );
+  }, [daily]);
 
   const totalTasks = tasks.length;
   const todoTasks = tasks.filter((task) => task.status === "Todo").length;

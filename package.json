@@ -14,7 +14,9 @@
   "dependencies": {
     "concurrently": "^9.0.1",
     "cross-env": "^7.0.3",
+    "dotenv": "^17.4.0",
     "electron": "^37.2.0",
+    "openai": "^6.33.0",
     "wait-on": "^8.0.3"
   }
 }

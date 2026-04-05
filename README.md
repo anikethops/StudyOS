@@ -1,7 +1,7 @@
-# 🚀 StudyOS — Desktop Productivity OS for Students
+# 🚀 StudyOS — AI-Powered Study & Productivity Desktop App
 
-StudyOS is a modern desktop productivity system built for students and self-learners.
-It combines task management, deep focus sessions, notes, and analytics into one seamless workflow.
+StudyOS is a modern desktop productivity system designed for students and self-learners.
+It combines task management, deep focus sessions, notes, analytics, and AI assistance into one seamless workflow.
 
 ---
 
@@ -9,16 +9,29 @@ It combines task management, deep focus sessions, notes, and analytics into one 
 
 ### 🧠 Productivity Core
 
-* Task Manager (Create, Edit, Filter, Prioritize)
+* Task Manager (Create, Edit, Prioritize, Track)
 * Focus Timer (Pomodoro with auto-cycle + sound)
 * Notes System (Tags, Pinning, Search, Split Editor)
 * Daily Progress Tracking (Focus time, tasks, streaks)
+
+---
+
+### 🤖 AI Study Assistant
+
+* Summarize notes instantly
+* Convert notes into bullet points
+* Generate revision questions
+* Save AI output directly to Notes
+
+---
 
 ### 📊 Intelligence Layer
 
 * Dynamic Dashboard (real-time stats)
 * Daily analytics (focus sessions, completion rate)
 * Streak tracking system
+
+---
 
 ### ⚙️ Customization
 
@@ -27,11 +40,14 @@ It combines task management, deep focus sessions, notes, and analytics into one 
 * Enable/disable animations
 * Persistent user preferences
 
+---
+
 ### 🎨 Experience
 
 * Smooth UI animations (Framer Motion)
-* Clean modern UI (Tailwind CSS)
-* Desktop-native feel (Electron)
+* Modern UI (Tailwind CSS)
+* Desktop-native experience (Electron)
+* 3D dashboard visual (Three.js)
 
 ---
 
@@ -42,60 +58,83 @@ It combines task management, deep focus sessions, notes, and analytics into one 
 * Tailwind CSS
 * Zustand (State Management)
 * Framer Motion (Animations)
+* Three.js + React Three Fiber (3D UI)
+* OpenAI API (AI features)
 
 ---
 
 ## 📸 Screenshots
 
 ### Dashboard
+
+ 
+
 ![Dashboard](assets/screenshots/dashboard.png)
 
+  
+
 ### Tasks
+
+ 
+
 ![Tasks](assets/screenshots/tasks.png)
 
+  
+
 ### Focus Timer
+
+ 
+
 ![Focus](assets/screenshots/focus.png)
 
+  
+
 ### Notes
+
+ 
+
 ![Notes](assets/screenshots/notes.png)
 
+  
+
+### AI Studio
+
+ 
+
+![Settings](assets/screenshots/ai.png)
+
+  
+
 ### Settings
+
+ 
+
 ![Settings](assets/screenshots/settings.png)
 
----
-
-## 📂 Project Structure
-
-renderer/
-components/
-pages/
-store/
-types/
-utils/
-
-electron/
-main process
+  
 
 ---
 
 ## 🚧 Roadmap
 
-* [ ] 3D Dashboard Visual (Three.js)
-* [ ] AI Study Assistant (summarization, Q&A)
+* [ ] Chat-style AI interface
+* [ ] Save AI history
+* [ ] Export notes to PDF
 * [ ] Cloud sync
 * [ ] Mobile companion app
-* [ ] Theme customization
 
 ---
 
 ## 💡 Why StudyOS?
 
 Most productivity tools are fragmented.
+
 StudyOS combines:
 
-* planning
-* execution
-* reflection
+* Planning
+* Execution
+* Reflection
+* AI assistance
 
 into one unified system.
 
